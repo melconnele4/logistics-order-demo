@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物流商务订单系统</title>
+    <meta name="description" content="物流商务订单管理平台 - 客户合同管理、订单审核、TMS派车、账单结算">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-truck-fast"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">物流商务</span>
+                    <span class="logo-subtitle">订单管理系统</span>
+                </div>
+            </div>
+        </div>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <div class="nav-section">
+                <div class="nav-section-title">主导航</div>
+                <a class="nav-item active" data-page="dashboard" id="nav-dashboard">
+                    <i class="fas fa-chart-pie"></i><span>数据看板</span>
+                </a>
+                <a class="nav-item" data-page="contracts" id="nav-contracts">
+                    <i class="fas fa-file-contract"></i><span>客户合同</span>
+                </a>
+                <a class="nav-item" data-page="orders" id="nav-orders">
+                    <i class="fas fa-clipboard-list"></i><span>订单管理</span>
+                </a>
+                <a class="nav-item" data-page="billing" id="nav-billing">
+                    <i class="fas fa-file-invoice-dollar"></i><span>账单管理</span>
+                </a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">系统管理</div>
+                <a class="nav-item" data-page="config" id="nav-config">
+                    <i class="fas fa-cogs"></i><span>规则配置</span>
+                </a>
+                <a class="nav-item" data-page="users" id="nav-users">
+                    <i class="fas fa-users-cog"></i><span>用户管理</span>
+                </a>
+                <a class="nav-item" data-page="miniapp" id="nav-miniapp">
+                    <i class="fas fa-mobile-alt"></i><span>小程序预览</span>
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar"><i class="fas fa-user"></i></div>
+                <div class="user-details">
+                    <span class="user-name">管理员</span>
+                    <span class="user-role">商务审核员</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <div class="breadcrumb" id="breadcrumb">
+                    <span class="breadcrumb-item"><i class="fas fa-home"></i></span>
+                    <span class="breadcrumb-sep">/</span>
+                    <span class="breadcrumb-item active" id="breadcrumbCurrent">数据看板</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="全局搜索...">
+                </div>
+                <button class="topbar-btn" title="通知">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </button>
+                <button class="topbar-btn" title="全屏">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content" id="pageContent">
+            <!-- Dashboard is the default page, rendered by JS -->
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modalContainer">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">标题</h3>
+                <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer" id="modalFooter">
+                <button class="btn btn-secondary" id="modalCancel">取消</button>
+                <button class="btn btn-primary" id="modalConfirm">确认</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/mockData.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/contracts.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/miniapp.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
