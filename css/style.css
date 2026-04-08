@@ -543,6 +543,87 @@ table tbody tr:hover { background: var(--primary-bg); }
     color: var(--text-muted); font-size: 16px; margin-bottom: 24px;
 }
 
+/* ==== CHECKBOX IN TABLES ==== */
+table thead th input[type="checkbox"],
+table tbody td input[type="checkbox"] {
+    width: 16px; height: 16px; cursor: pointer;
+    accent-color: var(--primary);
+}
+
+/* ==== READONLY FIELD ==== */
+.field-readonly {
+    background: #f0f0f0 !important; color: var(--text-muted) !important;
+    cursor: not-allowed; border-color: #e0e0e0 !important;
+}
+
+/* ==== EDITABLE FIELD LABEL ==== */
+.field-editable-label {
+    color: var(--primary) !important; font-weight: 600 !important;
+}
+.field-editable {
+    border-color: var(--primary-light) !important;
+    background: white !important;
+}
+.field-editable:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px var(--primary-bg) !important;
+}
+
+/* ==== FIELD VALIDATION ERRORS ==== */
+.field-error {
+    font-size: 11px; color: var(--danger);
+    margin-top: 4px; display: none;
+}
+.field-error-border {
+    border-color: var(--danger) !important;
+    box-shadow: 0 0 0 3px rgba(225,112,85,0.15) !important;
+}
+.field-required-tag {
+    font-size: 9px; background: rgba(225,112,85,0.1);
+    color: var(--danger); padding: 2px 6px;
+    border-radius: 4px; font-weight: 600; margin-left: 4px;
+}
+
+/* ==== TEXTAREA ==== */
+textarea.form-input {
+    height: auto; padding: 10px 12px; line-height: 1.5;
+}
+
+/* ==== SWITCH TOGGLE ==== */
+.switch-toggle {
+    position: relative; display: inline-block;
+    width: 48px; height: 26px;
+}
+.switch-toggle input {
+    opacity: 0; width: 0; height: 0;
+}
+.switch-slider {
+    position: absolute; cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #ccc; border-radius: 26px;
+    transition: 0.3s;
+}
+.switch-slider::before {
+    content: ''; position: absolute;
+    height: 20px; width: 20px;
+    left: 3px; bottom: 3px;
+    background: white; border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.switch-toggle input:checked + .switch-slider {
+    background: var(--accent);
+}
+.switch-toggle input:checked + .switch-slider::before {
+    transform: translateX(22px);
+}
+
+/* ==== BTN DISABLED ==== */
+.btn:disabled {
+    opacity: 0.5; cursor: not-allowed;
+    transform: none !important;
+}
+
 /* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
     .sidebar { transform: translateX(-100%); }

@@ -99,7 +99,8 @@ const MockData = (() => {
             revenue: 2000, remark: '加急配送',
             receiverId: 'TH0003', receiverName: '瑞安冷库提货',
             receiverPhone: '13900002001', quantity: 50, weight: 1547.29, volume: 14.505,
-            totalFreight: 2000, creator: '系统', createTime: '2026-03-29 08:00:00'
+            totalFreight: 2000, creator: '系统', createTime: '2026-03-29 08:00:00',
+            deliveryAddress: '浙江省温州市瑞安市安阳街道冷链物流园1号库', deliveryContact: '赵收货', deliveryContactPhone: '13900002001', deliveryStatus: '已签收'
         },
         {
             id: 2, orderNo: 'SW2026032902', isTransfer: true,
@@ -109,7 +110,8 @@ const MockData = (() => {
             revenue: 3500, remark: '',
             receiverId: 'TH0004', receiverName: '龙湾瑶溪白楼下提货',
             receiverPhone: '13900003001', quantity: 80, weight: 2450.00, volume: 22.300,
-            totalFreight: 3500, creator: '系统', createTime: '2026-03-29 08:15:00'
+            totalFreight: 3500, creator: '系统', createTime: '2026-03-29 08:15:00',
+            deliveryAddress: '浙江省温州市龙湾区瑶溪街道白楼下冷库园区', deliveryContact: '孙收货', deliveryContactPhone: '13900003001', deliveryStatus: '配送中'
         },
         {
             id: 3, orderNo: 'SW2026032903', isTransfer: false,
@@ -119,7 +121,8 @@ const MockData = (() => {
             revenue: 0, remark: '冷冻品，注意温控',
             receiverId: 'TH0005', receiverName: '鳌江海跃冷库',
             receiverPhone: '13900004001', quantity: 30, weight: 980.50, volume: 8.200,
-            totalFreight: 0, creator: '系统', createTime: '2026-03-29 09:00:00'
+            totalFreight: 0, creator: '系统', createTime: '2026-03-29 09:00:00',
+            deliveryAddress: '浙江省温州市平阳县鳌江镇海跃冷链基地C区', deliveryContact: '马收货', deliveryContactPhone: '13900004001', deliveryStatus: '待发货'
         },
         {
             id: 4, orderNo: 'SW2026032904', isTransfer: false,
@@ -129,7 +132,8 @@ const MockData = (() => {
             revenue: 0, remark: '',
             receiverId: 'TH0006', receiverName: '鳌江杨鸣',
             receiverPhone: '13900005001', quantity: 120, weight: 3600.00, volume: 30.000,
-            totalFreight: 0, creator: '系统', createTime: '2026-03-29 09:30:00'
+            totalFreight: 0, creator: '系统', createTime: '2026-03-29 09:30:00',
+            deliveryAddress: '浙江省温州市平阳县鳌江镇杨鸣冷库', deliveryContact: '杨收货', deliveryContactPhone: '13900005001', deliveryStatus: '待发货'
         },
         {
             id: 5, orderNo: 'SW2026032801', isTransfer: false,
@@ -139,7 +143,8 @@ const MockData = (() => {
             revenue: 1800, remark: '',
             receiverId: 'TH0007', receiverName: '鑫鑫牧业',
             receiverPhone: '13900006001', quantity: 40, weight: 1200.00, volume: 10.500,
-            totalFreight: 1800, creator: '系统', createTime: '2026-03-28 14:00:00'
+            totalFreight: 1800, creator: '系统', createTime: '2026-03-28 14:00:00',
+            deliveryAddress: '浙江省温州市平阳县水头镇牧业产业园2号', deliveryContact: '杨收货', deliveryContactPhone: '13900006001', deliveryStatus: '已签收'
         },
         {
             id: 6, orderNo: 'SW2026032802', isTransfer: true,
@@ -149,7 +154,8 @@ const MockData = (() => {
             revenue: 4200, remark: '冷藏专车',
             receiverId: 'SWPY', receiverName: '商务平阳',
             receiverPhone: '13800001001', quantity: 100, weight: 3200.00, volume: 28.000,
-            totalFreight: 4200, creator: '系统', createTime: '2026-03-28 15:00:00'
+            totalFreight: 4200, creator: '系统', createTime: '2026-03-28 15:00:00',
+            deliveryAddress: '浙江省温州市平阳县昆阳镇工业园区A栋3号仓', deliveryContact: '陈经理', deliveryContactPhone: '13800001001', deliveryStatus: '配送中'
         },
         {
             id: 7, orderNo: 'SW2026032701', isTransfer: false,
@@ -159,7 +165,8 @@ const MockData = (() => {
             revenue: 1500, remark: '',
             receiverId: 'TH0004', receiverName: '龙湾瑶溪白楼下提货',
             receiverPhone: '13900003001', quantity: 25, weight: 750.00, volume: 6.800,
-            totalFreight: 1500, creator: '系统', createTime: '2026-03-27 10:00:00'
+            totalFreight: 1500, creator: '系统', createTime: '2026-03-27 10:00:00',
+            deliveryAddress: '浙江省温州市龙湾区瑶溪街道白楼下冷库园区', deliveryContact: '孙收货', deliveryContactPhone: '13900003001', deliveryStatus: '已签收'
         },
         {
             id: 8, orderNo: 'SW2026032702', isTransfer: false,
@@ -169,16 +176,30 @@ const MockData = (() => {
             revenue: 2200, remark: '',
             receiverId: 'TH0005', receiverName: '鳌江海跃冷库',
             receiverPhone: '13900004001', quantity: 60, weight: 1800.00, volume: 15.000,
-            totalFreight: 2200, creator: '系统', createTime: '2026-03-27 11:00:00'
+            totalFreight: 2200, creator: '系统', createTime: '2026-03-27 11:00:00',
+            deliveryAddress: '浙江省温州市平阳县鳌江镇海跃冷链基地C区', deliveryContact: '马收货', deliveryContactPhone: '13900004001', deliveryStatus: '已签收'
         },
     ];
 
     // ===== 中转点信息 =====
     const transferPoints = [
-        { id: 1, orderNo: 'SW2026032902', seq: 1, warehouse: '瑞安中转冷库', waybillNo: 'YD20260329001', freight: 1500 },
-        { id: 2, orderNo: 'SW2026032902', seq: 2, warehouse: '龙湾配送中心', waybillNo: 'YD20260329002', freight: 2000 },
-        { id: 3, orderNo: 'SW2026032802', seq: 1, warehouse: '平阳中转站', waybillNo: 'YD20260328003', freight: 2000 },
-        { id: 4, orderNo: 'SW2026032802', seq: 2, warehouse: '鹿城集散中心', waybillNo: 'YD20260328004', freight: 2200 },
+        { id: 1, orderNo: 'SW2026032902', seq: 1, warehouse: '瑞安中转冷库', waybillNo: 'YD20260329001', freight: 1500, contactPerson: '周经理', phone: '13800002001' },
+        { id: 2, orderNo: 'SW2026032902', seq: 2, warehouse: '龙湾配送中心', waybillNo: 'YD20260329002', freight: 2000, contactPerson: '吴师傅', phone: '13800003001' },
+        { id: 3, orderNo: 'SW2026032802', seq: 1, warehouse: '平阳中转站', waybillNo: 'YD20260328003', freight: 2000, contactPerson: '林主管', phone: '13800001002' },
+        { id: 4, orderNo: 'SW2026032802', seq: 2, warehouse: '鹿城集散中心', waybillNo: 'YD20260328004', freight: 2200, contactPerson: '郑总', phone: '13800006001' },
+    ];
+
+    // ===== 审核操作日志 =====
+    const auditLogs = [
+        { id: 1, time: '2026-01-15 10:30:00', operator: '张三', action: '审核通过', targetType: '合同', targetId: 'SWPY', remark: '资质齐全' },
+        { id: 2, time: '2026-02-20 14:20:00', operator: '张三', action: '审核通过', targetType: '合同', targetId: 'TH0003', remark: '' },
+        { id: 3, time: '2026-03-29 08:05:00', operator: '张三', action: '审核通过', targetType: '订单', targetId: 'SW2026032901', remark: '加急处理' },
+        { id: 4, time: '2026-03-29 08:20:00', operator: '张三', action: '审核通过', targetType: '订单', targetId: 'SW2026032902', remark: '' },
+    ];
+
+    // ===== 订单修改日志 =====
+    const orderModifyLogs = [
+        { id: 1, time: '2026-03-29 10:00:00', operator: '张三', orderNo: 'SW2026032901', field: '收入金额', oldValue: '1800', newValue: '2000', remark: '客户确认调整' },
     ];
 
     // ===== 账单 =====
@@ -266,6 +287,8 @@ const MockData = (() => {
         settlements,
         orders,
         transferPoints,
+        auditLogs,
+        orderModifyLogs,
         bills,
         users,
         tmsOrgs,
